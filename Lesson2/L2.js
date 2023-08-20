@@ -60,16 +60,39 @@ console.log(users[3].age); //3
 // console.log('adult');
 // } else {
 // console.log('cartoon'); }
+//---------------------------------------------------------------------------------//
 
-let color=prompt('which color your see?');
-let isRoadClear=confirm('road is clear?')
+//let color=prompt('which color your see?')
+//let isRoadClear=confirm('road is clear?')
 
-if (color==='green' && isRoadClear) {                 //   &- амперсант, перевірка
-    console.log('go');                               //    && -AND (і)
-} else if (color==='yellow'){                        //    || - OR (або)
-    console.log('wait');
-} else if (color==='red'){
-    console.log('stop');
-} else {
-    console.log('???????');
-}
+//if (color==='green' && isRoadClear) {                 //   &- амперсант, перевірка
+   // console.log('go');                               //    && -AND (і), строга перевірка
+//} else if (color==='yellow'){                        //    || - OR (або), не строга перевірка
+    //console.log('wait');
+//} else if (color==='red'){
+    //console.log('stop');
+//} else {
+    //console.log('???????');
+//}
+
+//--------------------------------------------------------------------------------------------//
+
+//switch (color) {                              // switch- для множинної перевірки!
+    //case 'green':                             // case - кейс окремий для кожного
+       //console.log('go');                    // break; - закриває case, наступний відкривається автоматично
+        //break;
+
+    //case 'yellow':
+        //console.log('wait');
+        //break;
+
+    //case 'red':
+        //console.log('stop');
+        //break;
+
+    //default:
+        //console.log('vfvrfgf');
+//}
+
+
+
