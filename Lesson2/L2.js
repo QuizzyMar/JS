@@ -53,5 +53,23 @@ let users=[
 console.log(users);      //[{…}, {…}, {…}, {…}]
 console.log(users[3]);   //{id: 4, name: 'Daria', age: 3, status: false}
 console.log(users[3].age); //3
+//-------------------------------------------------------------------------'//
 
+// let age= +prompt ( 'enter your age');
+// if (age>18){
+// console.log('adult');
+// } else {
+// console.log('cartoon'); }
 
+let color=prompt('which color your see?');
+let isRoadClear=confirm('road is clear?')
+
+if (color==='green' && isRoadClear) {                 //   &- амперсант, перевірка
+    console.log('go');                               //    && -AND (і)
+} else if (color==='yellow'){                        //    || - OR (або)
+    console.log('wait');
+} else if (color==='red'){
+    console.log('stop');
+} else {
+    console.log('???????');
+}
