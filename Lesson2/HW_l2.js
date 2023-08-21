@@ -199,6 +199,10 @@ if(a>b){
 let X='hello';
 console.log()
 
+
+
+
+
 //- з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити
 // кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 
@@ -210,23 +214,26 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ]
-if(coursesAndDurationArray[0]&&=5){
+if(coursesAndDurationArray[0]){
     console.log('');
 }
-else if(coursesAndDurationArray[1]&&5){
-    console.log('Super');
-}
-else if(coursesAndDurationArray[2]&&5){
-    console.log('Super');
-}
-else if(coursesAndDurationArray[3]&&5){
+else if(coursesAndDurationArray[1]){
     console.log('');
 }
-else if(coursesAndDurationArray[4]&&5){
-    console.log('Super');
-}
-else if(coursesAndDurationArray[5]&&5){
+else if(coursesAndDurationArray[2]){
     console.log('');
+}
+else if(coursesAndDurationArray[3]){
+    console.log('');
+}
+else if(coursesAndDurationArray[4]){
+    console.log('');
+}
+else if(coursesAndDurationArray[5]){
+    console.log('');
+}
+else if([0],[1],[2],[3],[4],[5]>5){
+    console.log('Super');
 }
 else {
     console.log('!!!!!!');
