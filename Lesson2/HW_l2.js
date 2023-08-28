@@ -131,7 +131,7 @@ if ('x!==0'){
 // це число (у першу, другу чи третю).
 
 //let day=+prompt('what decade?');
-//if (day>=1&&day<=10){
+//if (day>=0&&day<=10){
     //console.log('oneDecade');
 //} else if(day>=11&&day<=20){
     //console.log('twoDecade');
@@ -197,6 +197,7 @@ if(a>b){
 // змінної х являється falsy (хибноподібні, тобто приводиться до false)
 
 let X='hello';
+let re
 console.log()
 
 
