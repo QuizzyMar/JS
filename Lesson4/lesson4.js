@@ -31,6 +31,13 @@
 // looper(users1);
 // looper(users2);
 
+// function M(array) {
+//     for (let arrayElement of array) {
+//         console.log(arrayElement)
+//     }
+// }
+// M([1, 5, `bla`, true, 30]);
+
 
 // function oyy(a,b,c) {
 //     console.log(a)
@@ -45,6 +52,20 @@
 // }
 // calc(10,20)
 
+// function foo2() {
+//     console.log(arguments)
+//     let arr=Array.from(arguments);
+//     let result=0;
+//     for (const numder of arr) {
+//         result=result+numder;{
+//             console.log(`result:`, result)
+//         }
+//     }
+// }
+// foo2(2,4,5,9,5,6,7)
+// foo2(5,4,2)
+
+
 function foo2() {
     console.log(arguments)
     let arr=Array.from(arguments);
@@ -52,8 +73,11 @@ function foo2() {
     for (const numder of arr) {
         result=result+numder;{
             console.log(`result:`, result)
+            return result;
         }
     }
 }
-foo2(2,4,5,9,5,6,7)
-foo2(5,4,2)
+const a=foo2(2,4,5,9,5,6,7)
+const b=foo2 (5,4,2)
+console.log(a)
+console.log(b)
