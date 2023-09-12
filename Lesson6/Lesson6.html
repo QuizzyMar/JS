@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // let str='hello world';
+ //console.log(str.concat('!!!'));
+
+//  let pass1='okten';
+//  let pass2='OKTEN';
+//
+// let case1 = (pass1.toUpperCase());                   toUpperCase-збільшує тект
+//  console.log(case1);
+//  let case2 = (pass2.toUpperCase());
+//  console.log(case2);
+//  console.log(case1===case2);
+//
+//  console.log(case1.toLowerCase());                    toLowerCase-змкншує текст
+//  console.log(case2.toLowerCase());
+
+// let token ='Bearer ghu7582-043e85g7grdv0g9ggr82g7t3';//token ключ
+//  console.log(token.startsWith('Bearer'));            //startsWith- перевіряємо з чого починається стрінга
+//  console.log(token.endsWith('3'));                   //endsWith- перевірки закінчення
+
+    let str='hello world !!';
+    // let inOfSpase=str.indexOf(' ');                //indexOf(' ')-шукаємо символ(пробіл)
+    // console.log(inOfSpase);
+    // console.log(str.substring(0,inOfSpase));
+
+    // let split=str.split(' ');                           //split(' ') -ріже по пробілам
+    // console.log(split);
+
+//     let cook = 'name=ira;surname=dere;age=30';
+//     let tupleArray=cook.split(';');
+//     console.log(tupleArray);
+//     let obj={};
+//     for (const keyVaulePair of tupleArray) {
+//         let keyVauleArray= keyVaulePair.split('=');
+//         console.log(keyVauleArray[0]);
+//         console.log(keyVauleArray[1]);
+//         obj[keyVauleArray[0]]=keyVaulePair[1];
+//     }
+// console.log(obj);
+
+    let phone= '+38 (067) 123-12-12'
+    let phoneVer1=phone
+    // let phoneVer1=phone.replaceAll('-',' ');
+    // console.log(phoneVer1);
+    // let phoneVer2=phone.replaceAll('(',' ');
+    // console.log(phoneVer2);
+    // let phoneVer3=phone.replaceAll(')','');
+    // console.log(phoneVer3); скорочуємо!
+    .replaceAll('-',' ')
+        .replaceAll('(',' ')
+        .replaceAll(')','');
+    console.log(phoneVer1);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
