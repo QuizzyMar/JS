@@ -8,25 +8,25 @@
 <script>
 
     // let str='hello world';
- //console.log(str.concat('!!!'));
+    //console.log(str.concat('!!!'));
 
-//  let pass1='okten';
-//  let pass2='OKTEN';
-//
-// let case1 = (pass1.toUpperCase());                   toUpperCase-збільшує тект
-//  console.log(case1);
-//  let case2 = (pass2.toUpperCase());
-//  console.log(case2);
-//  console.log(case1===case2);
-//
-//  console.log(case1.toLowerCase());                    toLowerCase-змкншує текст
-//  console.log(case2.toLowerCase());
+    //  let pass1='okten';
+    //  let pass2='OKTEN';
+    //
+    // let case1 = (pass1.toUpperCase());                   toUpperCase-збільшує тект
+    //  console.log(case1);
+    //  let case2 = (pass2.toUpperCase());
+    //  console.log(case2);
+    //  console.log(case1===case2);
+    //
+    //  console.log(case1.toLowerCase());                    toLowerCase-змкншує текст
+    //  console.log(case2.toLowerCase());
 
-// let token ='Bearer ghu7582-043e85g7grdv0g9ggr82g7t3';//token ключ
-//  console.log(token.startsWith('Bearer'));            //startsWith- перевіряємо з чого починається стрінга
-//  console.log(token.endsWith('3'));                   //endsWith- перевірки закінчення
+    // let token ='Bearer ghu7582-043e85g7grdv0g9ggr82g7t3';//token ключ
+    //  console.log(token.startsWith('Bearer'));            //startsWith- перевіряємо з чого починається стрінга
+    //  console.log(token.endsWith('3'));                   //endsWith- перевірки закінчення
 
-    let str='hello world !!';
+    let str = 'hello world !!';
     // let inOfSpase=str.indexOf(' ');                //indexOf(' ')-шукаємо символ(пробіл)
     // console.log(inOfSpase);
     // console.log(str.substring(0,inOfSpase));
@@ -34,39 +34,146 @@
     // let split=str.split(' ');                           //split(' ') -ріже по пробілам
     // console.log(split);
 
-//     let cook = 'name=ira;surname=dere;age=30';
-//     let tupleArray=cook.split(';');
-//     console.log(tupleArray);
-//     let obj={};
-//     for (const keyVaulePair of tupleArray) {
-//         let keyVauleArray= keyVaulePair.split('=');
-//         console.log(keyVauleArray[0]);
-//         console.log(keyVauleArray[1]);
-//         obj[keyVauleArray[0]]=keyVaulePair[1];
-//     }
-// console.log(obj);
+    //     let cook = 'name=ira;surname=dere;age=30';
+    //     let tupleArray=cook.split(';');
+    //     console.log(tupleArray);
+    //     let obj={};
+    //     for (const keyVaulePair of tupleArray) {
+    //         let keyVauleArray= keyVaulePair.split('=');
+    //         console.log(keyVauleArray[0]);
+    //         console.log(keyVauleArray[1]);
+    //         obj[keyVauleArray[0]]=keyVaulePair[1];
+    //     }
+    // console.log(obj);
 
-    let phone= '+38 (067) 123-12-12'
-    let phoneVer1=phone
-    // let phoneVer1=phone.replaceAll('-',' ');
-    // console.log(phoneVer1);
-    // let phoneVer2=phone.replaceAll('(',' ');
-    // console.log(phoneVer2);
-    // let phoneVer3=phone.replaceAll(')','');
-    // console.log(phoneVer3); скорочуємо!
-    .replaceAll('-',' ')
-        .replaceAll('(',' ')
-        .replaceAll(')','');
-    console.log(phoneVer1);
+    let phone = '+38 (067) 123-12-12'
+    let replaceAll = phone
+        // let phoneVer1=phone.replaceAll('-',' ');
+        // console.log(phoneVer1);
+        // let phoneVer2=phone.replaceAll('(',' ');
+        // console.log(phoneVer2);
+        // let phoneVer3=phone.replaceAll(')','');
+        // console.log(phoneVer3); скорочуємо!
+        .replaceAll('-', ' ')           // .replaceAll-прибераємо лишне!
+        .replaceAll('(', ' ')
+        .replaceAll(')', '')
+        .replaceAll('+38', '');
+
+    console.log(replaceAll);
+
+    // 'пишеш'.log+Tab =  console.log(пишеш);
+    let arr = [];
+    console.log(arr);
+    let newSizeofArray = arr.push('qwe');  //push-додає на початок
+    console.log(arr, newSizeofArray);
+
+    arr.unshift('kok');                    //unshift-дод у кінець
+    console.log(arr);
+    let shiftEl = arr.shift();               //shift- реверсивний до unshift
+    console.log(shiftEl);
+    console.log(arr);
+
+    let popedEl = arr.pop();                 //pop - реверсивний до push!
+    console.log(popedEl);
+    console.log(arr);
+
+    let arr1 = [11, 22, 33, 44];
+    let s = arr1.join('---');              //join-зєднати в одну стрінгу, для набору імен через (-,_,,)
+    console.log(s);
+
+    let num1 = [11, 22, 33];
+    let num2 = [111, 222, 333];
+    let numbers = num1.concat(num2);          //concat- обєднати в один
+    console.log(numbers);
+
+    let arr2 = [11, 22, 33, 44, 55, 66, 77, 88];
+    // let pieSlice = arr2.slice(1, 3);          //    slice- дістати якийсь індекс з масиву з якого по який()
+    // console.log(arr2);
+    // console.log(pieSlice);
+    arr2.splice(0,1,'qwe','sghjk');
+    console.log(arr2);                              // splice-з якого індексу починати і скільки ел видалити
+                                                    //можна видалити деуілька і вставити через ,
+
+console.log(arr2.includes(33));                     //includes-чи містить масим певний ел
+let reverse=arr2.reverse();                         //reverse-реверсить!
+console.log(reverse);
+
+//---------------------------------------------------------------
+    let arr3 = [11, 22, 33, 44, 55, 66, 77, 88];
+// arr3.forEach(()=>console.log('hello'));
+    //arr3.forEach((x)=>console.log(x));              forEach- запускає цикл по всім ел, скорочений варіант циклу
+
+    // let even =[];
+    // for (const item of arr3) {
+    //     console.log(item);
+    //     if (item % 2 === 0) {
+    //         even.push(item);
+    //     }
+    // }
+    // console.log(even);   скорочено
+    let  filter1 = arr3.filter(x=>x%2===0);    //x%2-ділення по модолю, вичавлення остачі
+    console.log(filter1);
+
+    let users = [
+    {name: 'vasya', age: 31, status: false},
+    {name: 'petya', age: 30, status: true},
+    {name: 'kolya', age: 29, status: true},
+    {name: 'olya', age: 28, status: false},
+    {name: 'max', age: 30, status: true},
+    {name: 'anya', age: 31, status: false},
+    {name: 'oleg', age: 28, status: false},
+    {name: 'andrey', age: 29, status: true},
+    {name: 'masha', age: 30, status: true},
+    {name: 'olya', age: 31, status: false},
+    {name: 'max', age: 31, status: true}
+    ];
+    // users.forEach(value => console.log(value));  forEach -всіх виведе в консоль
+
+    // let filter=users.filter(value => value.status);
+    // console.log(filter);
+
+   // let predicate = function (value) {
+   //    return value.status;
+   //  };
+   //  let filter = users.filter(predicate);
+   //  console.log(filter);
 
 
+//     users.map(function (u) {
+//         u.id=uuidv4();
+//         return u;
+//     });
+// console.log(map);
 
+   //  let usersWithId=[];
+   //  for (const user of users) {
+   //      user.id=
+   //  }
+   //
+   //
+   // users.map(value => {
+   //     delete value.status;
+   //     return value;
+   // });
+   // console.log(map);              ????? не пішло!!!
 
+// let  sort= users.sort((u1,u2) =>{
+//     return u1.age-u2.age
+// });
+// console.log(sort);
+//
+// console.log();
 
+    let reduce=users.reduce(function (accuvulator, u) {
+        if (u.status){
+            accuvulator.yes.push(u);
+        } else {
+            accuvulator.no.push(u);
+        }
+        return accuvulator
 
-
-
-
+    }, {no:[],yes:[]});
+    console.log(reduce);
 
 
 
