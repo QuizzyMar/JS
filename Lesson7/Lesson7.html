@@ -5,6 +5,133 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let now = new Date();
+    console.log(now);
+    console.log(now.getDate());
+    console.log(now.getDay());
+    console.log(now.getHours());
+    console.log(now.getMonth());
+    console.log(now.getMinutes());
+    console.log(now.getSeconds());
+    console.log(now.getTime());
 
+    // setTimeout(()=>{
+    //     document.write(`<div>${new Date()}</div>`)    // now або new Date -виведе у браузер поточну дату та час
+    // },1000);
+
+    // let date=new Date(157466536);
+    // console.log(date);
+
+    // let date=new Date('Aug 26 1993 7:55:55');   //точна дата та час
+    // let date=new Date(1993,7,26,7,55,55);             //перечислити через кому
+    //     console.log(date);
+
+    let User = {
+        id: 1,
+        name: 'maryna',
+        bday: new Date(1993, 7, 26, 7, 55, 55)
+    }
+    console.log(User);
+
+    let User1 = {
+        id: new Date().getTime(),
+        name: 'maryna',
+        bday: new Date(1993, 7, 26, 7, 55, 55)
+    }
+    console.log(User1);
+
+    console.log(`start`);
+    try {
+        console.log(notPresented);
+    } catch (error) {
+        console.log(error);
+    } finally {
+        console.log(`end`);
+    }
+
+
+    let obj = {};
+    console.log(obj?.innerObj?.id);
+    console.log(obj.innerObj);
+
+    let car = {
+        id: 1,
+        producer: 'Geely',
+        model: `MK`,
+        power: 16
+    };
+    // let id=car.id;
+    // let model=car.model;   скоротити->
+    let {id, model} = car;
+    console.log(id);
+    console.log(model);
+
+    function extractor({id, model}) {
+        return {
+            carId: id,
+            carModel: model
+        }
+    }
+
+    extractor({id: 'qwe', model: 'hjmmnccfvfv', mon: 'jfjcncj', too: 'iko'})
+
+    let car1 = {
+        id: 1,
+        producer: 'Geely',
+        model: `MK`,
+        power: 16,
+        fary: true,
+        kasko: true,
+    };
+    let {id: vid, model: vModel} = car1;            //щоб не повторювались id,model і тд, добавляємо v - id:vid,model:vModel
+    console.log(vid);
+    console.log(vModel);
+
+    let [a, b, , d] = [                          //щоб вивести 4рядок, без3 - ігноруємо його a,b, ,d - назва довільна (user...
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false}];
+    console.log(a);
+    console.log(b);
+    console.log(d);
+
+    // let user = {
+    //     name: 'kokos',
+    //     age: 23
+    // }
+    // // let user2={name:user.name, age:user.age}
+    // let user2= {...user}; //{...user} скорочено замість name:user.name, age:user.age
+    //
+    // user2.name='tomat';
+    //     console.log(user);
+
+    // user2.name='xxx'
+    // user2.id=2     //замість цього скорочуємо->
+    // let user2 = {...user, id: 2, name: "xxx"}
+    // console.log(user);
+    // console.log(user2);
+
+    let user = {
+        name: 'kokos',
+        age: 23,
+        wife:{
+            name:'anna',
+        }
+    }
+    let JsonUser= JSON.stringify(user);      //JSON.stringify- перетвор.є на тсрінгу, в якому і ключі і значиння в ))
+    console.log(JsonUser);
+    let parseUser=JSON.parse(JsonUser);
+    console.log(parseUser);
+
+    console.log(user===parseUser);
+    console.log(user.wife===parseUser.wife);
+
+
+
+
+
+</script>
 </body>
 </html>
