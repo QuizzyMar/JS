@@ -5,6 +5,60 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+function userFactoryFunction(id,name) {
+    return{id,name}
+}
+let user= userFactoryFunction(1,'maryna');
+console.log(user);
 
+
+
+ function User(id,name) {
+     this.id=id;
+     this.name=name;
+     this.greeting=function () {
+         console.log(`hello my name is ${this.name}`);
+     };
+ }
+ let user1=new User(1,'maryna');
+ console.log(user1);
+ user1.greeting();
+
+ let user2=new User(2,'alex');
+ console.log(user2);
+ user2.greeting();
+
+ // console.log(new User());       //undefited
+
+
+function User1(id,name,age) {
+    this.id=id;
+    this.name=name;
+    this.age=age;
+    this.greeting=function (){
+        return`hello my name is ${this.name} and hello my name is${this.age}`
+    };
+
+}
+
+let user3=new User1(111,'kokos',123);
+console.log(user3.greeting());
+
+
+let user4={
+   name:'tolik',
+    age:234,
+}
+//  console.log(user3.greeting.call(user4));              // call,apply- підміняє this в певних функціях
+// console.log(user3.greeting.apply(user4,['ddd','ssd','wfwfw']));
+let greeting=user3.greeting.bind(user4);                 //bind-копія функції з конкретним контекстом
+console.log(greeting);
+console.log(greeting('ddcc','ddsa','ijhg','igtuj'));
+
+
+
+
+</script>
 </body>
 </html>
